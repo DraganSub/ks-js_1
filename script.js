@@ -48,8 +48,7 @@ function startGame() {
     let playerSelection = prompt(`
     Rock, Paper or Scissors game
 
-    This is your playground and the rules are simple,
-    
+    This is your playground and the rules are simple:
     Play the game for 5 rounds and see if you can beat 
     the computer! 
 
@@ -71,6 +70,8 @@ function startGame() {
       
       Current round: ${i + 1}
       `);
+
+      playerSelection = playerSelection.trim().toLowerCase();
     }
 
     const computerSelection = computerPlay();
