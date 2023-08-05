@@ -45,7 +45,16 @@ function startGame() {
   const roundsToWin = 5;
 
   for (let i = 0; i < roundsToWin; i++) {
-    let playerSelection = prompt("Please enter Rock, Paper or Scissors:");
+    let playerSelection = prompt(`
+    Rock, Paper or Scissors game
+
+    This is your playground and the rules are simple,
+    
+    Play the game for 5 rounds and see if you can beat 
+    the computer! 
+
+    Rounds played: ${i} 
+    Please enter Rock, Paper or Scissors:`);
 
     const playerSelectionList = gameOptions.map(gameOption => gameOption.toLowerCase().trim());
 
@@ -55,7 +64,11 @@ function startGame() {
       /* Escape in case of game canceling */
       if (playerSelection == null) break;
 
-      playerSelection = prompt("I don't recognize your selection, let's try it again.");
+      playerSelection = prompt(`
+      I don't recognize your selection, let's try it again. 
+      
+      Current round: ${i + 1}
+      `);
     }
 
     const computerSelection = computerPlay();
