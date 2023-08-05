@@ -17,10 +17,13 @@ function playSingleRound(playerSelection, computerSelection) {
   };
 
   if (playerSelection === computerSelection) {
+    console.log("It's a tie!");
     return setGameResult("It's a tie!", "tie");
   } else if (gameWinningCombinations[playerSelection] === computerSelection) {
+    console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
     return setGameResult(`You win! ${playerSelection} beats ${computerSelection}.`, "win");
   } else {
+    console.log(`You lose! ${computerSelection} beats ${playerSelection}.`);
     return setGameResult(`You lose! ${computerSelection} beats ${playerSelection}.`, "loss");
   }
 }
