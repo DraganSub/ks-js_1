@@ -18,8 +18,8 @@ function setGameResult(message, status) {
 // Play single round of the game 
 function playSingleRound(playerSelection, computerSelection) {
 
-  const playerSelectionLowecase = playerSelection.toLowerCase().trim();
-  const computerSelectionLowercase = computerSelection.toLowerCase().trim();
+  const playerSelectionLowecase = playerSelection.trim().toLowerCase();
+  const computerSelectionLowercase = computerSelection.trim().toLowerCase();
 
   const gameWinningCombinations = {
     rock: "scissors",
@@ -27,7 +27,7 @@ function playSingleRound(playerSelection, computerSelection) {
     scissors: "paper",
   };
 
-  if (playerSelection === computerSelection.toLowerCase().trim()) {
+  if (playerSelection === computerSelection.trim().toLowerCase()) {
     console.log("It's a tie!");
     return setGameResult("It's a tie!", "tie");
   } else if (gameWinningCombinations[playerSelectionLowecase] === computerSelectionLowercase) {
@@ -56,7 +56,9 @@ function startGame() {
     Rounds played: ${i} 
     Please enter Rock, Paper or Scissors:`);
 
-    const playerSelectionList = gameOptions.map(gameOption => gameOption.toLowerCase().trim());
+    playerSelection = playerSelection.trim().toLowerCase();
+
+    const playerSelectionList = gameOptions.map(gameOption => gameOption.toLowerCase());
 
     /* Guard for correct user input */
 
