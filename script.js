@@ -50,15 +50,12 @@ function startGame() {
     const playerSelectionList = gameOptions.map(gameOption => gameOption.toLowerCase());
 
     /* Guard for correct user input */
-    while (!playerSelectionList.includes(playerSelection)) {
-      playerSelection = prompt("I don't recognize your selection, let's try it again.");
 
+    while (!playerSelectionList.includes(playerSelection)) {
       /* Escape in case of game canceling */
-      if (playerSelection === null) {
-        alert("You exit the game.");
-        console.log("You exit the game");
-        return; // Exit the function
-      }
+      if (playerSelection == null) break;
+
+      playerSelection = prompt("I don't recognize your selection, let's try it again.");
     }
 
     const computerSelection = computerPlay();
