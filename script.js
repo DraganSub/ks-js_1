@@ -61,8 +61,6 @@ function startGame() {
     const computerSelection = computerPlay();
     const result = playSingleRound(playerSelection, computerSelection);
 
-    console.log(result);
-
     // Update scores
     if (result.gameStatus === "win") {
       playerScore++;
