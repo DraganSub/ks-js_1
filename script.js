@@ -91,7 +91,7 @@ function startGame() {
     console.log(`Apparently, you won ${playerScore} to ${computerScore}`);
   } else if (playerScore < computerScore) {
     alert(`HAHA, you lost ${computerScore} to ${playerScore}`);
-    console.log("HAHA, you lost ${computerScore} to ${playerScore}");
+    console.log(`HAHA, you lost ${computerScore} to ${playerScore}`);
   } else {
     /* Guard if roundsToWin variable change its value */
     alert("It's a tie. Khm.");
