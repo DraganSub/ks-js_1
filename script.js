@@ -10,8 +10,6 @@ function setGameResult(message, status) {
 
 /* Single round calculation */
 function playSingleRound(playerSelection, computerSelection) {
-  if (playerSelection == null) return;
-
   const gameWinningCombinations = {
     rock: "scissors",
     paper: "rock",
@@ -38,13 +36,13 @@ function validateUserPlay(i = 0) {
     Rounds played: ${i}
     Please enter Rock, Paper, or Scissors:`);
 
-  while (!gameOptions.includes(playerSelection.trim().toLowerCase())) {
-    playerSelection = prompt(`I don't recognize your selection, let's try it again.\n\nCurrent round: ${i + 1}`);
-    if (playerSelection === null) break;
-  }
-
   if (playerSelection === null) {
     return;
+  }
+
+  while (!gameOptions.includes(playerSelection != null && playerSelection.trim().toLowerCase())) {
+    playerSelection = prompt(`I don't recognize your selection, let's try it again.\n\nCurrent round: ${i + 1}`);
+    if (playerSelection === null) return;
   }
 
   return playSingleRound(playerSelection.trim().toLowerCase(), computerPlay());
