@@ -4,11 +4,11 @@ This is a simple implementation of the classic Rock, Paper, Scissors game using 
 
 ### Getting Started
 
-To play the game, simply open the [link] file in a web browser that supports JavaScript. The game will prompt you to enter your choice (Rock, Paper, or Scissors) through a dialog box. After five rounds, the game will declare the overall winner.
+To play the game, simply open the [Rock, Paper, Scissors Game](https://dragansub.github.io/ks-js_1/) in a web browser that supports JavaScript. The game will prompt you to enter your choice (Rock, Paper, or Scissors) through a dialog box. After five rounds, the game will declare the overall winner.
 
 ### How to Play
 
-- Open the [link] file in your web browser.
+- Open the [Rock, Paper, Scissors Game](https://dragansub.github.io/ks-js_1/) file in your web browser.
 - A dialog box will appear asking you to enter your choice (Rock, Paper, or Scissors).
 - Type your choice in the dialog box and click "OK."
 - The computer will randomly choose its play (Rock, Paper, or Scissors).
